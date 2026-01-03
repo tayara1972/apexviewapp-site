@@ -423,6 +423,7 @@ h1{
   font-size:13px;
 }
 
+
 /* Responsive */
 @media (max-width: 900px){
   .nav-links{display:none}
