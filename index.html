@@ -1,59 +1,246 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ApexView</title>
-    <meta name="description" content="ApexView coming soon." />
-    <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-        background: #000;
-        color: rgba(255, 255, 255, 0.88);
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#060B14" />
+  <title>ApexView | See your full financial picture</title>
+  <meta name="description" content="All your money and assets in one place. Track income and expenses, and plan your retirement. On-device only." />
 
-      .wrap {
-        min-height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 14px;
-        padding: 18px;
-      }
+  <meta property="og:title" content="ApexView | See your full financial picture" />
+  <meta property="og:description" content="All your money and assets in one place. Track income and expenses, and plan your retirement. On-device only." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/networth.png" />
 
-      img {
-        width: min(920px, 100%);
-        height: auto;
-        object-fit: contain;
-        display: block;
-      }
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-      .support {
-        font-size: 14px;
-        color: rgba(255, 255, 255, 0.8);
-      }
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="ApexView Home">
+        <img src="assets/logo.png" alt="ApexView logo" class="brand-mark" />
+        <span class="brand-name">ApexView</span>
+      </a>
 
-      .support a {
-        color: rgba(120, 180, 255, 0.95);
-        text-decoration: none;
-        border-bottom: 1px solid rgba(120, 180, 255, 0.35);
-      }
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#screens">Screens</a>
+        <a href="#features">Features</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
+      </nav>
 
-      .support a:hover {
-        text-decoration: none;
-        border-bottom-color: rgba(120, 180, 255, 0.75);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <img src="apexview-poster.png" alt="ApexView coming soon" />
-      <div class="support">
-        Support: <a href="mailto:support@apexviewapp.com?subject=ApexView%20Support">support@apexviewapp.com</a>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="#signup">Get updates</a>
+        <a class="btn btn-primary" href="#signup">Download (soon)</a>
       </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </body>
+
+    <div class="nav-mobile" id="navMobile" aria-hidden="true">
+      <a href="#screens">Screens</a>
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-ghost" href="#signup">Get updates</a>
+      <a class="btn btn-primary" href="#signup">Download (soon)</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="pill">On-device only • No cloud sync required</div>
+
+          <h1>ApexView: See your full financial picture</h1>
+          <p class="lead">All your money and assets in one place. Track your income and expenses, and plan your retirement.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#signup">Get notified for launch</a>
+            <a class="btn btn-ghost" href="#screens">See the app</a>
+          </div>
+
+          <div class="trust">
+            <div class="trust-item">Private by default</div>
+            <div class="trust-item">Multi-asset dashboard</div>
+            <div class="trust-item">Retirement projection</div>
+          </div>
+
+          <div class="fineprint">
+            Want the App Store button to go live? Add your TestFlight or App Store link later by editing <code>index.html</code>.
+          </div>
+        </div>
+
+        <div class="hero-media" aria-label="ApexView preview">
+          <div class="phone-frame">
+            <img src="assets/networth.png" alt="ApexView net worth dashboard screen" class="phone-shot" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="screens">
+      <div class="container">
+        <div class="section-head">
+          <h2>Designed for clarity</h2>
+          <p class="muted">A simple dashboard for multi-asset tracking, spending insights, and retirement planning.</p>
+        </div>
+
+        <div class="shots">
+          <button class="shot-nav" id="prevShot" aria-label="Previous screenshot">‹</button>
+
+          <div class="shot-stage">
+            <img id="shotImg" src="assets/networth.png" alt="ApexView screenshot" />
+          </div>
+
+          <button class="shot-nav" id="nextShot" aria-label="Next screenshot">›</button>
+        </div>
+
+        <div class="shot-dots" id="shotDots" aria-label="Screenshot navigation"></div>
+
+        <div class="shot-caption" id="shotCaption">
+          Total net worth and asset allocation at a glance.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head">
+          <h2>What you get</h2>
+          <p class="muted">Three outcomes that matter. Everything else is noise.</p>
+        </div>
+
+        <div class="grid3">
+          <article class="card">
+            <h3>One view of your money</h3>
+            <p>See your net worth and allocation across cash, real estate, business, stocks, crypto, and more.</p>
+          </article>
+
+          <article class="card">
+            <h3>Income and expenses, simplified</h3>
+            <p>Understand where money comes from and where it goes with clean breakdowns and category allocation.</p>
+          </article>
+
+          <article class="card">
+            <h3>Retirement projection</h3>
+            <p>Model retirement age, spending, and runway. Spot the risk early and adjust with confidence.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="privacy">
+      <div class="container">
+        <div class="section-head">
+          <h2>Privacy-first</h2>
+          <p class="muted">Finance apps only earn trust when privacy is obvious.</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>On-device only</h3>
+            <p>Your data stays on your phone. No account required to get started.</p>
+          </div>
+
+          <div class="card">
+            <h3>No selling data</h3>
+            <p>ApexView does not sell your personal financial data. Ever.</p>
+          </div>
+        </div>
+
+        <div class="note">
+          Make sure your in-app privacy policy matches this page. If it does not, change the wording here.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p class="muted">Answer the objections before they bounce.</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Is my data uploaded anywhere?</summary>
+            <div class="answer">No. ApexView is designed to keep your data on your device.</div>
+          </details>
+
+          <details>
+            <summary>Do you connect to my bank?</summary>
+            <div class="answer">Not in the current version. You manually add holdings and balances.</div>
+          </details>
+
+          <details>
+            <summary>When will it be available?</summary>
+            <div class="answer">Join the email list below and you will be notified when TestFlight and the App Store listing are live.</div>
+          </details>
+
+          <details>
+            <summary>How much will it cost?</summary>
+            <div class="answer">Pricing is not final yet. Early users will get a clear offer before launch.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta" id="signup">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-copy">
+            <h2>Get launch updates</h2>
+            <p class="muted">Be first in line when the App Store button becomes real.</p>
+
+            <div class="mini-points">
+              <div class="mini-point">Early access</div>
+              <div class="mini-point">Release updates</div>
+              <div class="mini-point">No spam</div>
+            </div>
+          </div>
+
+          <div class="cta-form">
+            <!--
+              MAILCHIMP:
+              In Mailchimp, create an audience and a signup form, then copy the "embedded form" code.
+              Replace the entire <div class="mailchimp-embed"> ... </div> block below with that embed code.
+
+              If you prefer, you can also keep this simple form and set its action URL to your Mailchimp form post URL.
+            -->
+            <div class="mailchimp-embed">
+              <form class="simple-form" action="#" method="post" onsubmit="return false;">
+                <label class="sr-only" for="email">Email address</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+                <button class="btn btn-primary" type="submit" disabled title="Paste your Mailchimp embed code to activate.">Notify me</button>
+                <p class="form-note">To activate: paste your Mailchimp embed code here.</p>
+              </form>
+            </div>
+
+            <div class="support">
+              Support: <a href="mailto:support@apexviewapp.com">support@apexviewapp.com</a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div>© <span id="year"></span> ApexView</div>
+          <div class="footer-links">
+            <a href="#privacy">Privacy</a>
+            <a href="#top">Back to top</a>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
