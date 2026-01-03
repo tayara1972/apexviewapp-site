@@ -226,10 +226,12 @@ h1{
 }
 .phone-shot{
   display:block;
-  width:min(360px, 100%);
+  width:100%;
+  max-width:360px;
   height:auto;
   border-radius:22px;
 }
+
 
 /* Sections */
 .section{padding:56px 0}
@@ -417,6 +419,8 @@ h1{
   .nav-cta{display:none}
   .nav-toggle{display:block}
   .hero-inner{grid-template-columns: 1fr; gap:18px}
+  .phone-frame{padding:8px}
+  .phone-shot{max-width:300px}
   .grid3{grid-template-columns:1fr}
   .grid2{grid-template-columns:1fr}
   .cta-box{grid-template-columns:1fr}
