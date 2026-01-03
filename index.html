@@ -33,7 +33,7 @@
 
       <div class="nav-cta">
         <a class="btn btn-ghost" href="#signup">Get updates</a>
-        <a class="btn btn-primary" href="#signup">Get Notified</a>
+        <a class="btn btn-primary" href="#signup">Get notified</a>
       </div>
 
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -47,7 +47,7 @@
       <a href="#privacy">Privacy</a>
       <a href="#faq">FAQ</a>
       <a class="btn btn-ghost" href="#signup">Get updates</a>
-      <a class="btn btn-primary" href="#signup">Download (soon)</a>
+      <a class="btn btn-primary" href="#signup">Get notified</a>
     </div>
   </header>
 
@@ -89,15 +89,9 @@
     <section class="section" id="screens">
       <div class="container">
         <div class="section-head">
-  <h2>Privacy-first</h2>
-  <p class="muted">
-    Finance apps only earn trust when privacy is obvious.
-    <a href="privacy.html" style="margin-left:6px; color:rgba(87,230,255,.9); font-weight:600;">
-      Read our Privacy Policy
-    </a>
-  </p>
-</div>
-
+          <h2>Designed for clarity</h2>
+          <p class="muted">A simple dashboard for multi-asset tracking, spending insights, and retirement planning.</p>
+        </div>
 
         <div class="shots">
           <button class="shot-nav" id="prevShot" aria-label="Previous screenshot">‹</button>
@@ -147,7 +141,10 @@
       <div class="container">
         <div class="section-head">
           <h2>Privacy-first</h2>
-          <p class="muted">Finance apps only earn trust when privacy is obvious.</p>
+          <p class="muted">
+            Finance apps only earn trust when privacy is obvious.
+            <a href="privacy.html" class="inline-link">Read our Privacy Policy</a>
+          </p>
         </div>
 
         <div class="grid2">
@@ -214,41 +211,33 @@
           </div>
 
           <div class="cta-form">
-            <!--
-              MAILCHIMP:
-              In Mailchimp, create an audience and a signup form, then copy the "embedded form" code.
-              Replace the entire <div class="mailchimp-embed"> ... </div> block below with that embed code.
+            <div class="mailchimp-embed">
+              <form
+                class="simple-form"
+                action="https://apexviewapp.us20.list-manage.com/subscribe/post?u=0c8e243ed65530b5a7adcc376&amp;id=31da0cdd81&amp;f_id=005a5eeef0"
+                method="post"
+                target="_blank"
+                novalidate
+              >
+                <label class="sr-only" for="mce-EMAIL">Email address</label>
+                <input
+                  id="mce-EMAIL"
+                  name="EMAIL"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  required
+                />
 
-              If you prefer, you can also keep this simple form and set its action URL to your Mailchimp form post URL.
-            -->
-          <div class="mailchimp-embed">
-  <form
-    class="simple-form"
-    action="https://apexviewapp.us20.list-manage.com/subscribe/post?u=0c8e243ed65530b5a7adcc376&amp;id=31da0cdd81&amp;f_id=005a5eeef0"
-    method="post"
-    target="_blank"
-    novalidate
-  >
-    <label class="sr-only" for="mce-EMAIL">Email address</label>
-    <input
-      id="mce-EMAIL"
-      name="EMAIL"
-      type="email"
-      autocomplete="email"
-      placeholder="you@example.com"
-      required
-    />
+                <!-- Bot-trap field (keep this) -->
+                <div aria-hidden="true" style="position:absolute; left:-5000px;">
+                  <input type="text" name="b_0c8e243ed65530b5a7adcc376_31da0cdd81" tabindex="-1" value="">
+                </div>
 
-    <!-- Bot-trap field (keep this) -->
-    <div aria-hidden="true" style="position:absolute; left:-5000px;">
-      <input type="text" name="b_0c8e243ed65530b5a7adcc376_31da0cdd81" tabindex="-1" value="">
-    </div>
-
-    <button class="btn btn-primary" type="submit">Notify me</button>
-    <p class="form-note">We only email for launch and major updates.</p>
-  </form>
-</div>
-
+                <button class="btn btn-primary" type="submit">Notify me</button>
+                <p class="form-note">We only email for launch and major updates.</p>
+              </form>
+            </div>
 
             <div class="support">
               Support: <a href="mailto:support@apexviewapp.com">support@apexviewapp.com</a>
@@ -258,12 +247,10 @@
 
         <footer class="footer">
           <div>© <span id="year"></span> ApexView</div>
-        <div class="footer-links">
-  <a href="privacy.html">Privacy Policy</a>
-  <a href="terms.html">Terms</a>
-  <a href="#top">Back to top</a>
-</div>
-
+          <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms</a>
+            <a href="#top">Back to top</a>
           </div>
         </footer>
       </div>
