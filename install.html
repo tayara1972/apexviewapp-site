@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#060B14" />
+  <title>Install | ApexView</title>
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container" style="padding:72px 0; max-width:820px;">
+    <a class="brand" href="/" style="text-decoration:none; display:inline-flex; gap:10px; align-items:center;">
+      <img src="assets/logo.png" alt="ApexView logo" class="brand-mark" />
+      <span class="brand-name">ApexView</span>
+    </a>
+
+    <div class="card" style="margin-top:18px;">
+      <h1 style="margin:0 0 10px 0;">Install ApexView</h1>
+      <p class="muted" style="margin:0 0 18px 0;">
+        ApexView is iPhone-only. If you are on iPhone or iPad, we’ll open TestFlight now.
+      </p>
+
+      <div id="installMessage" class="note" style="display:none; margin-bottom:16px;"></div>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a id="installBtn" class="btn btn-primary" href="https://testflight.apple.com/join/hd8jdvmE" target="_blank" rel="noopener">
+          Open TestFlight →
+        </a>
+        <a class="btn btn-ghost" href="/">Back to home</a>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      const ua = navigator.userAgent || "";
+      const isIOS = /iPhone|iPad|iPod/i.test(ua);
+
+      const msg = document.getElementById("installMessage");
+      const btn = document.getElementById("installBtn");
+
+      if (!isIOS) {
+        if (msg) {
+          msg.style.display = "block";
+          msg.textContent = "This beta is for iPhone only. Open this page on your iPhone to install ApexView via TestFlight.";
+        }
+        // Optional: disable button for non-iOS to prevent confusion
+        if (btn) {
+          btn.setAttribute("aria-disabled", "true");
+          btn.style.pointerEvents = "none";
+          btn.style.opacity = "0.6";
+        }
+        return;
+      }
+
+      // On iOS: auto-redirect quickly
+      setTimeout(function () {
+        window.location.href = "https://testflight.apple.com/join/hd8jdvmE";
+      }, 350);
+    })();
+  </script>
+</body>
+</html>
