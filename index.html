@@ -4,13 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#060B14" />
-  <title>ApexView | See your full financial picture</title>
-  <meta name="description" content="All your money and assets in one place. Track income and expenses, and plan your retirement. On-device only." />
+  <title>ApexView | iPhone-only private finance tracker</title>
+  <meta name="description" content="ApexView is an iPhone-only finance tracker. On-device only. Track assets, income, expenses, and retirement projection." />
 
-  <meta property="og:title" content="ApexView | See your full financial picture" />
-  <meta property="og:description" content="All your money and assets in one place. Track income and expenses, and plan your retirement. On-device only." />
+  <meta property="og:title" content="ApexView | iPhone-only private finance tracker" />
+  <meta property="og:description" content="On-device only. Track assets, income, expenses, and retirement projection." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/networth.png" />
+  <meta property="og:image" content="https://apexviewapp.com/assets/networth.png" />
+  <meta property="og:url" content="https://apexviewapp.com" />
 
   <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="styles.css" />
@@ -18,7 +19,7 @@
 
 <body>
   <header class="nav">
-    <div class="nav-inner">
+    <div class="nav-inner container">
       <a class="brand" href="#top" aria-label="ApexView Home">
         <img src="assets/logo.png" alt="ApexView logo" class="brand-mark" />
         <span class="brand-name">ApexView</span>
@@ -32,8 +33,7 @@
       </nav>
 
       <div class="nav-cta">
-        <a class="btn btn-ghost" href="#signup">Get updates</a>
-        <a class="btn btn-primary" href="/install.html">Install</a>
+        <a class="btn btn-primary" id="installBtnTop" href="https://testflight.apple.com/join/hd8jdvmE" rel="noopener">Install on iPhone</a>
       </div>
 
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -41,13 +41,13 @@
       </button>
     </div>
 
-    <div class="nav-mobile" id="navMobile" aria-hidden="true">
+    <div class="nav-mobile container" id="navMobile" aria-hidden="true">
       <a href="#screens">Screens</a>
       <a href="#features">Features</a>
       <a href="#privacy">Privacy</a>
       <a href="#faq">FAQ</a>
+      <a class="btn btn-primary" id="installBtnMobile" href="https://testflight.apple.com/join/hd8jdvmE" rel="noopener">Install on iPhone</a>
       <a class="btn btn-ghost" href="#signup">Get updates</a>
-      <a class="btn btn-primary" href="/install.html">Install</a>
     </div>
   </header>
 
@@ -60,10 +60,12 @@
           <div class="pill">iPhone only • On-device only • No cloud sync required</div>
 
           <h1>ApexView: See your full financial picture</h1>
-          <p class="lead">All your money and assets in one place. Track your income and expenses, and plan your retirement.</p>
+          <p class="lead">
+            All your money and assets in one place. Track income and expenses, and plan your retirement.
+          </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="/install.html">Install on iPhone</a>
+            <a class="btn btn-primary" id="installBtnHero" href="https://testflight.apple.com/join/hd8jdvmE" rel="noopener">Install on iPhone</a>
             <a class="btn btn-ghost" href="#screens">See the app</a>
           </div>
 
@@ -74,7 +76,7 @@
           </div>
 
           <div class="fineprint">
-            TestFlight beta is live. Open the install link on your iPhone to get started.
+            TestFlight beta is live. Open this page on your iPhone to install.
           </div>
         </div>
 
@@ -90,7 +92,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Designed for clarity</h2>
-          <p class="muted">A simple dashboard for multi-asset tracking, spending insights, and retirement planning.</p>
+          <p class="muted">A clean dashboard for multi-asset tracking, spending insights, and retirement planning.</p>
         </div>
 
         <div class="shots">
@@ -115,51 +117,24 @@
       <div class="container">
         <div class="section-head">
           <h2>What you get</h2>
-          <p class="muted">Three outcomes that matter. Everything else is noise.</p>
+          <p class="muted">The essentials, without noise.</p>
         </div>
 
         <div class="grid3">
           <article class="card">
             <h3>One view of your money</h3>
-            <p>See your net worth and allocation across cash, real estate, business, stocks, crypto, and more.</p>
+            <p>See net worth and allocation across cash, real estate, business, stocks, crypto, and more.</p>
           </article>
 
           <article class="card">
-            <h3>Income and expenses, simplified</h3>
-            <p>Understand where money comes from and where it goes with clean breakdowns and category allocation.</p>
+            <h3>Income and expenses</h3>
+            <p>Understand where money comes from and where it goes with clean breakdowns.</p>
           </article>
 
           <article class="card">
             <h3>Retirement projection</h3>
-            <p>Model retirement age, spending, and runway. Spot the risk early and adjust with confidence.</p>
+            <p>Model retirement age, spending, and runway so you can adjust early.</p>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- iPhone-only install section -->
-    <section class="section" id="testflight">
-      <div class="container">
-        <div class="section-head">
-          <h2>Install the beta (iPhone only)</h2>
-          <p class="muted">ApexView is currently available via TestFlight for iPhone and iPad.</p>
-        </div>
-
-        <div class="grid2">
-          <div class="card">
-            <h3>Quick install</h3>
-            <p>
-              1) Open this page on your iPhone<br />
-              2) Tap “Install”<br />
-              3) Install via TestFlight
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Install now</h3>
-            <p>We’ll send iPhone users directly to TestFlight. Everyone else will be told to open on iPhone.</p>
-            <a class="btn btn-primary" href="/install.html">Install on iPhone →</a>
-          </div>
         </div>
       </div>
     </section>
@@ -169,7 +144,7 @@
         <div class="section-head">
           <h2>Privacy-first</h2>
           <p class="muted">
-            Finance apps only earn trust when privacy is obvious.
+            Your data stays on your phone.
             <a href="privacy.html" class="inline-link">Read our Privacy Policy</a>
           </p>
         </div>
@@ -177,17 +152,13 @@
         <div class="grid2">
           <div class="card">
             <h3>On-device only</h3>
-            <p>Your data stays on your phone. No account required to get started.</p>
+            <p>No account required to get started.</p>
           </div>
 
           <div class="card">
             <h3>No selling data</h3>
             <p>ApexView does not sell your personal financial data. Ever.</p>
           </div>
-        </div>
-
-        <div class="note">
-          Make sure your in-app privacy policy matches this page. If it does not, change the wording here.
         </div>
       </div>
     </section>
@@ -196,7 +167,7 @@
       <div class="container">
         <div class="section-head">
           <h2>FAQ</h2>
-          <p class="muted">Answer the objections before they bounce.</p>
+          <p class="muted">Answer objections fast.</p>
         </div>
 
         <div class="faq">
@@ -206,84 +177,10 @@
           </details>
 
           <details>
-            <summary>Is this available on Android?</summary>
-            <div class="answer">No. ApexView is currently iPhone-only.</div>
+            <summary>Does it work on Android?</summary>
+            <div class="answer">Not right now. This beta is iPhone-only.</div>
           </details>
 
           <details>
             <summary>When will it be on the App Store?</summary>
-            <div class="answer">Join the email list below and you will be notified when the App Store listing is live.</div>
-          </details>
-
-          <details>
-            <summary>How much will it cost?</summary>
-            <div class="answer">Pricing is not final yet. Early users will get a clear offer before launch.</div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-cta" id="signup">
-      <div class="container">
-        <div class="cta-box">
-          <div class="cta-copy">
-            <h2>Get launch updates</h2>
-            <p class="muted">Be first in line when the App Store button becomes real.</p>
-
-            <div class="mini-points">
-              <div class="mini-point">Early access</div>
-              <div class="mini-point">Release updates</div>
-              <div class="mini-point">No spam</div>
-            </div>
-          </div>
-
-          <div class="cta-form">
-            <div class="mailchimp-embed">
-              <form
-                class="simple-form"
-                action="https://apexviewapp.us20.list-manage.com/subscribe/post?u=0c8e243ed65530b5a7adcc376&amp;id=31da0cdd81&amp;f_id=005a5eeef0"
-                method="post"
-                target="_self"
-                novalidate
-              >
-                <label class="sr-only" for="mce-EMAIL">Email address</label>
-                <input
-                  id="mce-EMAIL"
-                  name="EMAIL"
-                  type="email"
-                  autocomplete="email"
-                  placeholder="you@example.com"
-                  required
-                />
-
-                <!-- Bot-trap field (keep this) -->
-                <div aria-hidden="true" style="position:absolute; left:-5000px;">
-                  <input type="text" name="b_0c8e243ed65530b5a7adcc376_31da0cdd81" tabindex="-1" value="">
-                </div>
-
-                <button class="btn btn-primary" type="submit">Notify me</button>
-                <p class="form-note">We only email for launch and major updates.</p>
-              </form>
-            </div>
-
-            <div class="support">
-              Support: <a href="mailto:support@apexviewapp.com">support@apexviewapp.com</a>
-            </div>
-          </div>
-        </div>
-
-        <footer class="footer">
-          <div>© <span id="year"></span> ApexView</div>
-          <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms</a>
-            <a href="#top">Back to top</a>
-          </div>
-        </footer>
-      </div>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
+            <div class="answer">Jo
