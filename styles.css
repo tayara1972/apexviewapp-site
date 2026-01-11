@@ -19,8 +19,10 @@
 
 *{box-sizing:border-box}
 html,body{height:100%}
+
 body{
   margin:0;
+  -webkit-text-size-adjust: 100%;
   font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   background: radial-gradient(1200px 700px at 70% 10%, rgba(46,139,255,.20), transparent 60%),
               radial-gradient(900px 600px at 25% 30%, rgba(87,230,255,.12), transparent 60%),
@@ -32,7 +34,7 @@ body{
 a{color:inherit}
 .muted{color:var(--muted)}
 .container{
-  width:min(1100px, calc(100% - 48px));
+  width:min(1100px, calc(100% - 40px));
   margin:0 auto;
 }
 .inline-link{
@@ -44,7 +46,6 @@ a{color:inherit}
 .inline-link:hover{
   text-decoration:underline;
 }
-
 
 .sr-only{
   position:absolute;
@@ -182,6 +183,8 @@ a{color:inherit}
   color:var(--muted);
   font-weight:600;
   width:max-content;
+  max-width:100%;
+  flex-wrap:wrap;
 }
 h1{
   font-size: clamp(34px, 4.2vw, 54px);
@@ -241,7 +244,6 @@ h1{
   height:auto;
   border-radius:22px;
 }
-
 
 /* Sections */
 .section{padding:56px 0}
@@ -423,18 +425,67 @@ h1{
   font-size:13px;
 }
 
-
 /* Responsive */
 @media (max-width: 900px){
+  .container{
+    width: calc(100% - 32px);
+  }
+
   .nav-links{display:none}
   .nav-cta{display:none}
   .nav-toggle{display:block}
-  .hero-inner{grid-template-columns: 1fr; gap:18px}
+
+  .nav-inner{
+    padding:12px 0;
+  }
+
+  .hero{
+    padding:40px 0 10px 0;
+  }
+
+  .hero-inner{
+    grid-template-columns: 1fr;
+    gap:18px;
+  }
+
+  h1{
+    font-size: clamp(30px, 8vw, 42px);
+    letter-spacing:-.4px;
+  }
+
+  .lead{
+    font-size:16px;
+  }
+
+  .hero-actions{
+    gap:10px;
+  }
+  .hero-actions .btn{
+    width:100%;
+    padding:12px 14px;
+    border-radius:16px;
+  }
+
   .phone-frame{padding:8px}
-  .phone-shot{max-width:300px}
+  .phone-shot{max-width:320px}
+
   .grid3{grid-template-columns:1fr}
   .grid2{grid-template-columns:1fr}
   .cta-box{grid-template-columns:1fr}
+
+  .simple-form{
+    grid-template-columns: 1fr;
+  }
+
   .shots{grid-template-columns: 44px 1fr 44px}
   .shot-nav{width:44px;height:44px}
+  .shot-stage img{
+    width:100%;
+    max-width:320px;
+  }
+
+  .footer{
+    flex-direction:column;
+    align-items:flex-start;
+  }
 }
