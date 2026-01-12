@@ -1,0 +1,11 @@
+# Pretty URLs
+/install   /install/   301
+/privacy   /privacy/   301
+/terms     /terms/     301
+/thanks    /thanks/    301
+
+# Legacy .html paths
+/install.html   /install/   301
+/privacy.html   /privacy/   301
+/terms.html     /terms/     301
+/thanks.html    /thanks/    301
