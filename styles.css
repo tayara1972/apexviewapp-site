@@ -426,6 +426,24 @@ h1{
 }
 
 /* Responsive */
+
+
+/* Inner pages (install/privacy/terms/thanks) */
+.page-wrap{
+  width: min(820px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 72px 0;
+}
+.page-wrap.tight{
+  padding: 48px 0;
+}
+.brand-row{
+  text-decoration:none;
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+}
+
 @media (max-width: 900px){
   .container{
     width: calc(100% - 32px);
@@ -489,3 +507,140 @@ h1{
     align-items:flex-start;
   }
 }
+
+
+
+/* Mobile-first refinements (iPhone and small screens) */
+@media (max-width: 600px){
+  .container{
+    width: calc(100% - 24px);
+  }
+
+  .section{
+    padding: 28px 0;
+  }
+
+  .section-head{
+    margin-bottom: 14px;
+  }
+
+  .section-head h2{
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  .pill{
+    font-size: 12px;
+    padding: 7px 10px;
+    gap: 8px;
+  }
+
+  .hero{
+    padding: 28px 0 10px 0;
+  }
+
+  h1{
+    font-size: 30px;
+    line-height: 1.08;
+    letter-spacing: -0.4px;
+  }
+
+  .lead{
+    font-size: 16px;
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
+
+  .hero-actions{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .hero-actions .btn{
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Trust chips: 2 columns instead of a long wrap */
+  .trust{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .trust-item{
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Screenshot carousel: keep the image large, put buttons below it */
+  .shots{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "stage stage"
+      "prev next";
+    gap: 10px;
+    align-items: stretch;
+  }
+  .shot-stage{
+    grid-area: stage;
+  }
+  #prevShot{
+    grid-area: prev;
+  }
+  #nextShot{
+    grid-area: next;
+  }
+  .shot-nav{
+    width: 100%;
+    height: 44px;
+  }
+  .shot-stage img{
+    max-width: 100%;
+  }
+
+  .shot-caption{
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .grid3{
+    gap: 12px;
+  }
+  .card{
+    padding: 16px;
+  }
+
+  /* Signup form area */
+  form{
+    width: 100%;
+  }
+  .form-row{
+    flex-direction: column;
+    gap: 10px;
+  }
+  input, select, textarea{
+    width: 100%;
+  }
+
+  /* Inner pages padding */
+  .page-wrap{
+    padding: 28px 0;
+  }
+  .page-wrap.tight{
+    padding: 22px 0;
+  }
+}
+
+@media (max-width: 420px){
+  .trust{
+    grid-template-columns: 1fr;
+  }
+  .shot-dots{
+    gap: 6px;
+  }
+  .btn{
+    padding: 12px 14px;
+  }
+}
+
+.mt-18{ margin-top:18px; }
